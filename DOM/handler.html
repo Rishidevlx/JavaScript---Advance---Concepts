@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handler VS Listener</title>
+</head>
+<body>
+    <h1>Handler Vs Listener</h1>
+
+    <button id="Listener-btn">Listener</button>
+    
+    <!-- <button id="Handler-btn" onclick="Handler_1()" onclick="Handler_2()">Handler</button> -->
+    
+    <button id="Handler-btn">Handler</button>
+    
+
+    <script src="listener.js"></script>
+
+    <script>
+        
+        // function Handler_1(){
+        //     console.log("1 I am Working"); // 1 I am Working
+        // } 
+        // function Handler_2(){
+        //     console.log("2 I am not Working");
+        // } 
+        
+        let btn2 =  document.getElementById("Handler-btn");
+
+        btn2.onclick = function(){
+            console.log("1 I am Not Working");
+        }
+
+        btn2.onclick = function(){
+            console.log("2 I am Working!"); // 2 I am Working!
+        }
+
+    </script>
+
+</body>
+</html>
